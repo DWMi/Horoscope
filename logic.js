@@ -1,5 +1,7 @@
 window.addEventListener("load", initSite);
 
+
+// Knappar
 const saveHoroscope = document.getElementById("saveHoro").addEventListener("click", addHoro),
     updateHoroscope = document.getElementById("updateHoro").addEventListener("click", updateHoro),
     deleteHoroscope = document.getElementById("deleteHoro").addEventListener("click", deleteHoro)
@@ -9,16 +11,16 @@ function initSite(){
  showHoro() 
 };
 
+// GET METODEN
 function showHoro(){
     const url = "./API/viewHoroscope.php",
     method = "GET"
-
     makeRequest(url, method, undefined, function(dataInput){   
             document.getElementById("dispText").innerText = dataInput
     });
 };
 
-
+// POST/SPARA METOD 
 function addHoro(){
     const birthDate = document.getElementById("date").value,
         url = "./API/addHoroscope.php",
@@ -32,6 +34,7 @@ function addHoro(){
     });
 };      
 
+//POST/POST METOD
 function updateHoro(){
     const birthDate = document.getElementById("date").value,
         url = "./API/updateHoroscope.php",
@@ -45,6 +48,7 @@ function updateHoro(){
     });
 };
 
+// DELETE METOD
 function deleteHoro(){
     const method = "DELETE",
         url ="./API/deleteHoroscope.php"
@@ -54,6 +58,7 @@ function deleteHoro(){
     });
 };
 
+// Delete text när horoskopet är borttaget
 const delText = (value) => {    
     if(value) {
         document.getElementById("dispText").innerText = "Stjärntecknet är borttaget!";
@@ -62,7 +67,7 @@ const delText = (value) => {
     }
 }
 
-
+// Fetch Metod
 async function makeRequest(url, method, formData, callback) {
 
     try {

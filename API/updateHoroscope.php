@@ -1,6 +1,6 @@
 <?php
 session_start();
-require("./horoscopeArray.php");
+require("./arrayHoroscope.php");
 
 if($_SERVER['REQUEST_METHOD']) {
 
@@ -18,13 +18,8 @@ if($_SERVER['REQUEST_METHOD']) {
                 exit;
             }
 
-        } else {
-            echo json_encode("Inge date tillsatt");
         }
 
-    } else {   
-        echo json_encode("Ej POST metod");
-        exit;
     }
 
 } 
