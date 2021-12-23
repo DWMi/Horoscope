@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainContainer {
+    background-image: url(zodiac.jpg);
+    background-size: 100vw 100vh;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+    width: 900px;
+    padding: 50px;
+    box-shadow: 4px 4px 10px black;
+}
+
+.horoInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    text-shadow: 4px 4px 4px #000000;
+}
+
+button {
+    background-color: transparent;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    text-align: center;
+    font-size: 20px;
+    border:none;
+    font-weight: bold;
+    text-shadow: 4px 4px 2px #000000;
+    box-shadow: 4px 4px 10px black;
+}
+
+.buttonsContainer {
+    display: flex;
+    align-items: center;
+}
+
+.buttonsContainer :hover {
+    cursor: pointer;
+    text-shadow: 4px 4px 4px #ffffff;
+}
+
+.inputDate {
+    margin: 10px;
+}
+
+.inputDate input {
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    border:none;
+    background-color: white;
+    box-shadow: 4px 4px 10px black;
+}
+
+.resultContainer #dispText{ 
+    font-family: "Yuji Hentaigana Akebono", cursive, bold;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
+}
