@@ -83,7 +83,7 @@ $horoscope = [
         $endDay = $value["end"]["day"];        
 
         
-          if ($inputMonth === $startMonth && $inputDay >= $startDay || $inputMonth <= $endMonth && $inputDay <= $endDay) {
+          if ($inputMonth === $startMonth && $inputDay >= $startDay || $inputMonth === $endMonth && $inputDay <= $endDay) {
             return $value['name'];
           }
         
