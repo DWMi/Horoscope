@@ -67,31 +67,20 @@ $horoscope = [
 
     ];
  
-    //  Gör så arrayen blir sträng sedan väljer "index" på månad & datum av YYYY-MM-DD
+    //  Tar en del av strängen och omvandlar till integer
     $inputMonth = (int)substr($date,5,2);
     $inputDay = (int)substr($date,8,2);
 
 
 
 
-//   LOOPAR genom arrayen
+    //  LOOPAR genom arrayen
     foreach ($horoscope as $key => $value) {
 
         $startMonth = $value["start"]["month"];
         $startDay = $value["start"]["day"];
         $endMonth = $value["end"]["month"];
-        $endDay = $value["end"]["day"];
-        
-        error_log('------------------------------');
-        error_log($startMonth. ' START MM');
-        error_log($startDay. ' START DD');
-        error_log('&&&&&&');
-        error_log($endMonth. ' END MM');
-        error_log($endDay. ' END DD');
-        error_log('-------');
-
-
-        
+        $endDay = $value["end"]["day"];        
 
         
           if ($inputMonth === $startMonth && $inputDay >= $startDay || $inputMonth <= $endMonth && $inputDay <= $endDay) {
