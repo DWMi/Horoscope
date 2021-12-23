@@ -1,3 +1,4 @@
 # Horoscope
 Horoscope REST API php
-https://github.com/DWMi/Horoscope.git
+
+Länk till Github: https://github.com/DWMi/Horoscope.git
